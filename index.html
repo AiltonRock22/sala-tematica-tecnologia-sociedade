@@ -62,12 +62,59 @@
     <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-slate-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-500 to-philosophy-accent flex items-center justify-center shadow-lg shadow-brand-500/20">
-                    <i class="fa-solid fa-microchip text-white text-lg"></i>
+                <!-- Brasão Vetorial Oficial da E. E. Felício Pereira de Araújo -->
+                <div class="w-12 h-12 bg-white rounded-xl border border-slate-700 flex items-center justify-center p-1 shadow-md shrink-0">
+                    <svg viewBox="0 0 200 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <!-- Caminho do Arco para o Texto Superior -->
+                            <path id="textArcTop" d="M 25 100 A 75 75 0 0 1 175 100" fill="none"/>
+                            <!-- Gradiente da Chama -->
+                            <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                                <stop offset="0%" stop-color="#ea580c"/>
+                                <stop offset="50%" stop-color="#f59e0b"/>
+                                <stop offset="100%" stop-color="#fef08a"/>
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Texto Superior em Arco -->
+                        <text font-family="Inter, sans-serif" font-size="11.5" font-weight="800" fill="#1e3a8a">
+                            <textPath href="#textArcTop" startOffset="50%" text-anchor="middle">
+                                E. E. FELÍCIO PEREIRA DE ARAÚJO
+                            </textPath>
+                        </text>
+
+                        <!-- Livro Aberto (Páginas em Vermelho) -->
+                        <g stroke="#dc2626" stroke-width="2.5" fill="none">
+                            <!-- Capa/Borda Externa do Livro -->
+                            <path d="M 100 138 Q 60 115 35 125 L 35 160 Q 60 150 100 172 Q 140 150 165 160 L 165 125 Q 140 115 100 138 Z" fill="#ffffff"/>
+                            <!-- Linhas Internas das Páginas -->
+                            <path d="M 42 133 Q 65 124 95 142 M 42 142 Q 65 133 95 151 M 42 151 Q 65 142 95 160"/>
+                            <path d="M 158 133 Q 135 124 105 142 M 158 142 Q 135 133 105 151 M 158 151 Q 135 142 105 160"/>
+                        </g>
+
+                        <!-- Tocha Central (Azul e Branco) -->
+                        <!-- Chama -->
+                        <path d="M 100 42 Q 90 62 100 80 Q 110 62 100 42 Z" fill="url(#flameGrad)" stroke="#d97706" stroke-width="1.5"/>
+                        <path d="M 100 52 Q 95 65 100 78 Q 105 65 100 52 Z" fill="#fef08a"/>
+
+                        <!-- Copo da Tocha -->
+                        <path d="M 82 80 L 118 80 L 112 95 L 88 95 Z" fill="#1e3a8a"/>
+                        <line x1="82" y1="85" x2="118" y2="85" stroke="#ffffff" stroke-width="2"/>
+                        <line x1="85" y1="90" x2="115" y2="90" stroke="#ffffff" stroke-width="2"/>
+
+                        <!-- Haste da Tocha -->
+                        <polygon points="88,95 112,95 102,168 98,168" fill="#1e3a8a"/>
+                        <circle cx="100" cy="170" r="3.5" fill="#1e3a8a"/>
+
+                        <!-- Texto Inferior -->
+                        <text x="100" y="191" font-family="Inter, sans-serif" font-size="11" font-weight="800" fill="#1e3a8a" text-anchor="middle">
+                            MONTES CLAROS
+                        </text>
+                    </svg>
                 </div>
                 <div>
-                    <span class="font-bold text-lg tracking-tight text-white block leading-tight">Sala Temática • Ciências Humanas</span>
-                    <p class="text-xs text-brand-400 font-medium">Orientação: Prof. Ailton Carlos Santos Mota</p>
+                    <span class="font-bold text-sm sm:text-base tracking-tight text-white block leading-tight">E. E. Felício Pereira de Araújo</span>
+                    <p class="text-xs text-brand-400 font-medium">Montes Claros - MG • Prof. Ailton Carlos Santos Mota</p>
                 </div>
             </div>
             
@@ -103,9 +150,16 @@
 
     <section id="projeto" class="relative pt-32 pb-20 hero-gradient overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700/60 mb-6 shadow-sm">
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-500 animate-pulse"></span>
-                <span class="text-xs uppercase tracking-wider text-slate-300 font-semibold">Projeto Interdisciplinar • Ciências Humanas</span>
+            <!-- Badges Institucionais -->
+            <div class="flex flex-wrap justify-center items-center gap-2 mb-6">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-950/80 border border-blue-500/30 text-blue-300 text-xs font-semibold">
+                    <i class="fa-solid fa-school text-blue-400"></i>
+                    <span>E. E. Felício Pereira de Araújo • Montes Claros / MG</span>
+                </div>
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/60 text-slate-300 text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                    <span>Ciências Humanas</span>
+                </div>
             </div>
 
             <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto mb-6">
@@ -114,7 +168,7 @@
             </h1>
 
             <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
-                Construção colaborativa dos estudantes do <span class="text-white font-semibold">1º, 2º e 3º Ano</span> sob orientação do <span class="text-white font-semibold">Prof. Ailton Carlos Santos Mota</span>. Unindo pesquisa teórica, produções gráficas, robótica com Arduino e análise crítica no nosso espaço expositivo.
+                Construção colaborativa dos estudantes da <span class="text-white font-semibold">E. E. Felício Pereira de Araújo</span> (1º, 2º e 3º Ano) sob orientação do <span class="text-white font-semibold">Prof. Ailton Carlos Santos Mota</span>.
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-10">
@@ -329,48 +383,67 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
                 <div>
                     <span class="text-xs font-bold uppercase tracking-widest text-brand-400 bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">Google Drive & Mídia</span>
-                    <h2 class="text-3xl font-bold text-white mt-3">Central Multimídia do Google Drive</h2>
-                    <p class="text-slate-400 text-sm mt-2 max-w-2xl">Áudios de orientação e materiais gravados para apoiar os alunos monitores. Todos os arquivos estão salvos e organizados na pasta pública do Google Drive.</p>
+    <footer class="bg-slate-950 py-12 border-t border-slate-800 text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 pb-8 border-b border-slate-800/80">
+                <!-- Identificação -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-3">
+                        <div class="w-10 h-10 bg-white rounded-lg border border-slate-700 flex items-center justify-center p-0.5 shrink-0">
+                            <svg viewBox="0 0 200 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                                <use href="#textArcTop"/>
+                                <text font-family="Inter, sans-serif" font-size="11.5" font-weight="800" fill="#1e3a8a">
+                                    <textPath href="#textArcTop" startOffset="50%" text-anchor="middle">
+                                        E. E. FELÍCIO PEREIRA DE ARAÚJO
+                                    </textPath>
+                                </text>
+                                <g stroke="#dc2626" stroke-width="2.5" fill="none">
+                                    <path d="M 100 138 Q 60 115 35 125 L 35 160 Q 60 150 100 172 Q 140 150 165 160 L 165 125 Q 140 115 100 138 Z" fill="#ffffff"/>
+                                    <path d="M 42 133 Q 65 124 95 142 M 42 142 Q 65 133 95 151 M 42 151 Q 65 142 95 160"/>
+                                    <path d="M 158 133 Q 135 124 105 142 M 158 142 Q 135 133 105 151 M 158 151 Q 135 142 105 160"/>
+                                </g>
+                                <path d="M 100 42 Q 90 62 100 80 Q 110 62 100 42 Z" fill="#f59e0b" stroke="#d97706" stroke-width="1.5"/>
+                                <path d="M 82 80 L 118 80 L 112 95 L 88 95 Z" fill="#1e3a8a"/>
+                                <polygon points="88,95 112,95 102,168 98,168" fill="#1e3a8a"/>
+                                <circle cx="100" cy="170" r="3.5" fill="#1e3a8a"/>
+                                <text x="100" y="191" font-family="Inter, sans-serif" font-size="11" font-weight="800" fill="#1e3a8a" text-anchor="middle">
+                                    MONTES CLAROS
+                                </text>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-white text-sm">Escola Estadual Felício Pereira de Araújo</h4>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">Sala Temática de Ciências Humanas • "Impacto da Tecnologia na Sociedade"</p>
+                    <p class="text-brand-400 font-medium mt-1">Orientação: Prof. Ailton Carlos Santos Mota</p>
                 </div>
-                <div class="flex flex-wrap items-center gap-3 self-start md:self-auto">
-                    <a href="https://drive.google.com/drive/u/1/folders/1c3KldhJ9ctub_V496yDOw91N1n9NbaAd" target="_blank" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-brand-400 border border-brand-500/30 font-medium text-xs transition-all flex items-center space-x-2">
-                        <i class="fa-brands fa-google-drive text-base"></i>
-                        <span>Abrir Pasta Completa no Drive</span>
-                    </a>
-                    <button onclick="toggleAddMediaModal()" class="px-4 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium text-xs transition-all shadow-lg shadow-brand-600/20 flex items-center space-x-2">
-                        <i class="fa-solid fa-plus"></i>
-                        <span>Adicionar Link de Vídeo/Áudio do Drive</span>
-                    </button>
+
+                <!-- Endereço Institucional -->
+                <div class="space-y-2">
+                    <h5 class="font-bold text-white text-xs uppercase tracking-wider text-slate-300 mb-2">Endereço da Escola</h5>
+                    <p class="flex items-start space-x-2">
+                        <i class="fa-solid fa-location-dot text-brand-400 mt-0.5 shrink-0"></i>
+                        <span>Rua Professor Genaldo, 475 – Bairro Sumaré<br>CEP 39.402-320 • Montes Claros – MG</span>
+                    </p>
+                </div>
+
+                <!-- Contatos Oficiais -->
+                <div class="space-y-2">
+                    <h5 class="font-bold text-white text-xs uppercase tracking-wider text-slate-300 mb-2">Contatos Oficiais</h5>
+                    <p class="flex items-center space-x-2">
+                        <i class="fa-solid fa-phone text-philosophy-accent shrink-0"></i>
+                        <span>Tel: (38) 3223-8633</span>
+                    </p>
+                    <p class="flex items-center space-x-2">
+                        <i class="fa-solid fa-envelope text-philosophy-accent shrink-0"></i>
+                        <span class="break-all">escola.81612@educacao.mg.gov.br</span>
+                    </p>
                 </div>
             </div>
 
-            <!-- Filtros de Mídia -->
-            <div class="flex flex-wrap gap-2 mb-8">
-                <button onclick="filterMediaByTag('todos')" class="media-filter-btn active text-xs font-medium px-4 py-2 rounded-xl bg-slate-800 text-slate-200 border border-slate-700 hover:bg-slate-700 transition-all">
-                    Todos os Recursos
-                </button>
-                <button onclick="filterMediaByTag('1º Ano')" class="media-filter-btn text-xs font-medium px-4 py-2 rounded-xl bg-slate-800/80 text-slate-400 border border-slate-700/60 hover:text-white transition-all">
-                    1º Ano
-                </button>
-                <button onclick="filterMediaByTag('2º Ano')" class="media-filter-btn text-xs font-medium px-4 py-2 rounded-xl bg-slate-800/80 text-slate-400 border border-slate-700/60 hover:text-white transition-all">
-                    2º Ano
-                </button>
-                <button onclick="filterMediaByTag('3º Ano')" class="media-filter-btn text-xs font-medium px-4 py-2 rounded-xl bg-slate-800/80 text-slate-400 border border-slate-700/60 hover:text-white transition-all">
-                    3º Ano (Arduino / Site)
-                </button>
+            <div class="text-center text-slate-500">
+                <p>© Escola Estadual Felício Pereira de Araújo • Montes Claros - MG</p>
+                <p class="mt-1">Projeto Interdisciplinar do Ensino Médio • Ciências Humanas</p>
             </div>
-
-            <!-- Grade de Mídias -->
-            <div id="media-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Mídias injetadas via Javascript -->
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-slate-950 py-10 border-t border-slate-800 text-center text-xs text-slate-500">
-        <div class="max-w-7xl mx-auto px-4">
-            <p class="text-slate-400 font-medium mb-1">Sala Temática: Impacto da Tecnologia na Sociedade — Prof. Ailton Carlos Santos Mota</p>
-            <p>Projeto Interdisciplinar do Ensino Médio • Ciências Humanas</p>
         </div>
     </footer>
 
@@ -477,6 +550,22 @@
         let mediaItems = [
             {
                 id: '1',
+                title: 'Vídeo do 1º Ano — Sala Temática',
+                type: 'drive',
+                url: 'https://drive.google.com/file/d/1JlOdh2_f0okJkq3GubLyqN82h2aPBtcT/view?usp=drive_link',
+                tag: '1º Ano',
+                description: 'Registro em vídeo do projeto e produções da turma do 1º Ano.'
+            },
+            {
+                id: '2',
+                title: 'Vídeo do 2º Ano — Sala Temática',
+                type: 'drive',
+                url: 'https://drive.google.com/file/d/1qViXB-t-bCnlbfIeSOfZhEKtOcDlC6El/view?usp=drive_link',
+                tag: '2º Ano',
+                description: 'Registro em vídeo das pesquisas e andamento das atividades do 2º Ano.'
+            },
+            {
+                id: '3',
                 title: 'Áudio de Orientação e Embasamento Teórico — 1º Ano',
                 type: 'drive',
                 url: 'https://drive.google.com/file/d/1Eux484WRUPbH7Kx46upvq9TRv5tFjHYi/view?usp=sharing',
@@ -484,7 +573,7 @@
                 description: 'Instruções e embasamento em Ciências Humanas gravados para a fundamentação teórica e banner do 1º Ano.'
             },
             {
-                id: '2',
+                id: '4',
                 title: 'Áudio de Orientação e Pesquisa Teórica — 2º Ano',
                 type: 'drive',
                 url: 'https://drive.google.com/file/d/1yMmCwUbT28rXAdj-6lMEdFuBUnriVc_T/view?usp=drive_link',
