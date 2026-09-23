@@ -1,1 +1,619 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala Temática | Impacto da Tecnologia na Sociedade - Prof. Ailton Carlos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        },
+                        philosophy: {
+                            dark: '#0f172a',
+                            card: '#1e293b',
+                            accent: '#38bdf8',
+                            gold: '#fbbf24'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 20%, #1e293b 0%, #0f172a 100%);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-philosophy-dark text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
+    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-500 to-philosophy-accent flex items-center justify-center shadow-lg shadow-brand-500/20">
+                    <i class="fa-solid fa-microchip text-white text-lg"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-lg tracking-tight text-white block leading-tight">Sala Temática • Ciências Humanas</span>
+                    <p class="text-xs text-brand-400 font-medium">Orientação: Prof. Ailton Carlos Santos Mota</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#projeto" class="hover:text-philosophy-accent transition-colors">Visão Geral</a>
+                <a href="#turmas" class="hover:text-philosophy-accent transition-colors">Turmas</a>
+                <a href="#mural" class="hover:text-philosophy-accent transition-colors">Mural de Notícias</a>
+                <a href="#multimidia" class="hover:text-philosophy-accent transition-colors flex items-center space-x-1.5 text-brand-400">
+                    <i class="fa-brands fa-google-drive"></i>
+                    <span>Vídeos e Áudios (Drive)</span>
+                </a>
+            </nav>
+
+            <div class="hidden md:flex items-center">
+                <a href="#turmas" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium text-sm transition-all shadow-lg shadow-brand-600/20 flex items-center space-x-2">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Ver Turmas</span>
+                </a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white p-2 rounded-lg bg-slate-800">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#projeto" class="block py-2 text-slate-300 hover:text-philosophy-accent font-medium">Visão Geral</a>
+            <a href="#turmas" class="block py-2 text-slate-300 hover:text-philosophy-accent font-medium">Turmas</a>
+            <a href="#mural" class="block py-2 text-slate-300 hover:text-philosophy-accent font-medium">Mural de Notícias</a>
+            <a href="#multimidia" class="block py-2 text-brand-400 font-medium">Vídeos e Áudios do Google Drive</a>
+        </div>
+    </header>
+
+    <section id="projeto" class="relative pt-32 pb-20 hero-gradient overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700/60 mb-6 shadow-sm">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-500 animate-pulse"></span>
+                <span class="text-xs uppercase tracking-wider text-slate-300 font-semibold">Projeto Interdisciplinar • Ciências Humanas</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto mb-6">
+                Impacto da Tecnologia <br class="hidden sm:block">
+                <span class="bg-gradient-to-r from-brand-400 via-philosophy-accent to-brand-500 bg-clip-text text-transparent">na Sociedade</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-10 font-normal leading-relaxed">
+                Construção colaborativa dos estudantes do <span class="text-white font-semibold">1º, 2º e 3º Ano</span> sob orientação do <span class="text-white font-semibold">Prof. Ailton Carlos Santos Mota</span>. Unindo pesquisa teórica, produções gráficas, robótica com Arduino e análise crítica no nosso espaço expositivo.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-10">
+                <div class="glass-panel p-6 rounded-2xl border border-slate-700/80 text-left">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold text-brand-400 bg-brand-500/10 px-2.5 py-1 rounded-md">1º Ano</span>
+                        <i class="fa-solid fa-file-image text-brand-400"></i>
+                    </div>
+                    <h3 class="font-bold text-white mb-1">Pesquisa & Banner</h3>
+                    <p class="text-xs text-slate-400">Fundamentação teórica concluída e banner finalizado produzido pela turma.</p>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl border border-slate-700/80 text-left">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold text-philosophy-accent bg-philosophy-accent/10 px-2.5 py-1 rounded-md">2º Ano</span>
+                        <i class="fa-solid fa-scroll text-philosophy-accent"></i>
+                    </div>
+                    <h3 class="font-bold text-white mb-1">Pesquisa & Embasamento</h3>
+                    <p class="text-xs text-slate-400">Pesquisa temática realizada com embasamento teórico e alinhamento do banner.</p>
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl border border-slate-700/80 text-left">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold text-philosophy-gold bg-philosophy-gold/10 px-2.5 py-1 rounded-md">3º Ano</span>
+                        <i class="fa-solid fa-laptop-code text-philosophy-gold"></i>
+                    </div>
+                    <h3 class="font-bold text-white mb-1">Site & Arduino</h3>
+                    <p class="text-xs text-slate-400">Desenvolvimento do site da mostra e projeto de robótica com Arduino para exposição.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="turmas" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white mb-4">Desenvolvimento do Projeto por Turma</h2>
+                <p class="text-slate-400 text-sm sm:text-base">Acompanhe as contribuições e produções pedagógicas na construção da sala temática.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1º Ano -->
+                <div class="glass-panel rounded-3xl p-8 border border-slate-700/80 flex flex-col justify-between hover:border-brand-500/50 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-brand-500/10 text-brand-400 text-xs font-bold uppercase">1º Ano</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-300 font-medium">Banner Concluído</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Fundamentação Teórica e Banner</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            A turma do 1º ano concluiu a pesquisa teórica orientada sobre o impacto tecnológico e já finalizou a confecção do banner representativo.
+                        </p>
+                        <ul class="space-y-2.5 text-xs text-slate-400 mb-6">
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-brand-400"></i>
+                                <span>Pesquisa de embasamento em Ciências Humanas</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-brand-400"></i>
+                                <span>Orientação do Prof. Ailton Carlos</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-brand-400"></i>
+                                <span>Banner impresso/pronto entregue</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('1º Ano', 'Pesquisa e Banner Finalizado', 'A turma realizou a etapa de pesquisa sob orientação teórica em Ciências Humanas com o Prof. Ailton e produziu o banner expositivo que fará parte da sala temática.')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium text-xs transition-colors">
+                        Detalhes do 1º Ano
+                    </button>
+                    <button onclick="filterMediaByTag('1º Ano')" class="mt-2 w-full py-2 rounded-xl bg-brand-500/10 hover:bg-brand-500/20 text-brand-400 font-medium text-xs transition-colors flex items-center justify-center space-x-1.5">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <span>Ver Recursos do 1º Ano</span>
+                    </button>
+                </div>
+
+                <!-- Card 2º Ano -->
+                <div class="glass-panel rounded-3xl p-8 border border-slate-700/80 flex flex-col justify-between hover:border-philosophy-accent/50 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-philosophy-accent/10 text-philosophy-accent text-xs font-bold uppercase">2º Ano</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-sky-500/20 text-sky-300 font-medium">Aguardando Banner</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Pesquisa Teórica e Layout</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            O 2º ano avançou com a investigação e embasamento teórico sobre tecnologia e sociedade, estando no momento ajustando a arte final do banner.
+                        </p>
+                        <ul class="space-y-2.5 text-xs text-slate-400 mb-6">
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-philosophy-accent"></i>
+                                <span>Pesquisa temática realizada</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-philosophy-accent"></i>
+                                <span>Suporte teórico do professor</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-clock text-amber-400"></i>
+                                <span>Aguardando retorno sobre o layout do banner</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('2º Ano', 'Pesquisa Teórica e Produção', 'A turma concluiu a fase de levantamento teórico e conceitual. A equipe está finalizando os ajustes do banner para posterior confecção.')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium text-xs transition-colors">
+                        Detalhes do 2º Ano
+                    </button>
+                    <button onclick="filterMediaByTag('2º Ano')" class="mt-2 w-full py-2 rounded-xl bg-philosophy-accent/10 hover:bg-philosophy-accent/20 text-philosophy-accent font-medium text-xs transition-colors flex items-center justify-center space-x-1.5">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <span>Ver Recursos do 2º Ano</span>
+                    </button>
+                </div>
+
+                <!-- Card 3º Ano -->
+                <div class="glass-panel rounded-3xl p-8 border border-slate-700/80 flex flex-col justify-between hover:border-philosophy-gold/50 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-philosophy-gold/10 text-philosophy-gold text-xs font-bold uppercase">3º Ano</span>
+                            <span class="text-xs px-2.5 py-1 rounded-md bg-amber-500/20 text-amber-300 font-medium">Site & Robótica</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Plataforma Web & Robótica Arduino</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Os formandos do 3º ano atuam na frente tecnológica: criação deste site da mostra e montagem do protótipo de robótica com Arduino para exposição física.
+                        </p>
+                        <ul class="space-y-2.5 text-xs text-slate-400 mb-6">
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-code text-philosophy-gold"></i>
+                                <span>Desenvolvimento do site da Sala Temática</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-robot text-philosophy-gold"></i>
+                                <span>Prototipagem de Robótica com Arduino</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-display text-philosophy-gold"></i>
+                                <span>Exposição interativa no dia do evento</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('3º Ano', 'Tecnologia Aplicada e Robótica', 'O 3º ano está responsável pelo desenvolvimento do site e do projeto prático de robótica com Arduino que será exibido durante a mostra da Sala Temática.')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium text-xs transition-colors">
+                        Detalhes do 3º Ano
+                    </button>
+                    <button onclick="filterMediaByTag('3º Ano')" class="mt-2 w-full py-2 rounded-xl bg-philosophy-gold/10 hover:bg-philosophy-gold/20 text-philosophy-gold font-medium text-xs transition-colors flex items-center justify-center space-x-1.5">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <span>Ver Recursos de Robótica/Arduino</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mural" class="py-20 bg-slate-900/60 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-400 bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">Espaço Físico</span>
+                    <h2 class="text-3xl font-bold text-white mt-4 mb-6">Mural de Notícias Impressas & Arte nas Paredes</h2>
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                        Para complementar a reflexão sobre o impacto da tecnologia na sociedade, a sala temática contará com uma parede dedicada a matérias e notícias de jornais/revistas selecionadas.
+                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-8">
+                        As impressões já realizadas pelo professor serão avaliadas junto com os estudantes em oficina, permitindo que eles produzam um painel estético, organizado e altamente informativo para os visitantes.
+                    </p>
+                    
+                    <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700 flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-newspaper"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Curadoria de Notícias</h4>
+                            <p class="text-xs text-slate-400">Notícias e recortes impressos para montagem artística e crítica com as turmas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-3xl border border-slate-700/80 relative">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center space-x-2">
+                        <i class="fa-solid fa-paintbrush text-philosophy-accent"></i>
+                        <span>Etapas do Mural da Sala</span>
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 flex items-start space-x-3">
+                            <span class="w-6 h-6 rounded-full bg-brand-500/20 text-brand-400 text-xs font-bold flex items-center justify-center mt-0.5">1</span>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Seleção & Impressão das Matérias</h4>
+                                <p class="text-xs text-slate-400">Notícias relevantes sobre tecnologia, IA e redes sociais preparadas para debate.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 flex items-start space-x-3">
+                            <span class="w-6 h-6 rounded-full bg-philosophy-accent/20 text-philosophy-accent text-xs font-bold flex items-center justify-center mt-0.5">2</span>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Oficina de Curadoria com Estudantes</h4>
+                                <p class="text-xs text-slate-400">Avaliação em sala para definir recortes, títulos e diagramação da arte.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-slate-800/50 border border-slate-700/50 flex items-start space-x-3">
+                            <span class="w-6 h-6 rounded-full bg-philosophy-gold/20 text-philosophy-gold text-xs font-bold flex items-center justify-center mt-0.5">3</span>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Instalação na Parede Expositiva</h4>
+                                <p class="text-xs text-slate-400">Fixação do painel artístico nas paredes da sala temática para o público.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="multimidia" class="py-20 relative bg-slate-950 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-400 bg-brand-500/10 px-3 py-1 rounded-full border border-brand-500/20">Google Drive & Mídia</span>
+                    <h2 class="text-3xl font-bold text-white mt-3">Central Multimídia do Google Drive</h2>
+                    <p class="text-slate-400 text-sm mt-2 max-w-2xl">Áudios de orientação e materiais gravados para apoiar os alunos monitores. Todos os arquivos estão salvos e organizados na pasta pública do Google Drive.</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-3 self-start md:self-auto">
+                    <a href="https://drive.google.com/drive/u/1/folders/1c3KldhJ9ctub_V496yDOw91N1n9NbaAd" target="_blank" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-brand-400 border border-brand-500/30 font-medium text-xs transition-all flex items-center space-x-2">
+                        <i class="fa-brands fa-google-drive text-base"></i>
+                        <span>Abrir Pasta Completa no Drive</span>
+                    </a>
+                    <button onclick="toggleAddMediaModal()" class="px-4 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium text-xs transition-all shadow-lg shadow-brand-600/20 flex items-center space-x-2">
+                        <i class="fa-solid fa-plus"></i>
+                        <span>Adicionar Link de Vídeo/Áudio do Drive</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filtros de Mídia -->
+            <div class="flex flex-wrap gap-2 mb-8">
+                <button onclick="filterMediaByTag('todos')" class="media-filter-btn active text-xs font-medium px-4 py-2 rounded-xl bg-slate-800 text-slate-200 border border-slate-700 hover:bg-slate-700 transition-all">
+                    Todos os Recursos
+                </button>
+                <button onclick="filterMediaByTag('1º Ano')" class="media-filter-btn text-xs font-medium px-4 py-2 rounded-xl bg-slate-800/80 text-slate-400 border border-slate-700/60 hover:text-white transition-all">
+                    1º Ano
+                </button>
+                <button onclick="filterMediaByTag('2º Ano')" class="media-filter-btn text-xs font-medium px-4 py-2 rounded-xl bg-slate-800/80 text-slate-400 border border-slate-700/60 hover:text-white transition-all">
+                    2º Ano
+                </button>
+                <button onclick="filterMediaByTag('3º Ano')" class="media-filter-btn text-xs font-medium px-4 py-2 rounded-xl bg-slate-800/80 text-slate-400 border border-slate-700/60 hover:text-white transition-all">
+                    3º Ano (Arduino / Site)
+                </button>
+            </div>
+
+            <!-- Grade de Mídias -->
+            <div id="media-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Mídias injetadas via Javascript -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 py-10 border-t border-slate-800 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-slate-400 font-medium mb-1">Sala Temática: Impacto da Tecnologia na Sociedade — Prof. Ailton Carlos Santos Mota</p>
+            <p>Projeto Interdisciplinar do Ensino Médio • Ciências Humanas</p>
+        </div>
+    </footer>
+
+    <!-- Modal Detalhes das Turmas -->
+    <div id="info-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden">
+        <div class="glass-panel w-full max-w-lg rounded-3xl p-6 sm:p-8 border border-slate-700 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <span id="modal-turma" class="text-xs font-bold uppercase tracking-wider text-brand-400">Turma</span>
+            <h3 id="modal-titulo" class="text-xl font-bold text-white mt-1 mb-3">Título</h3>
+            <p id="modal-texto" class="text-slate-300 text-sm leading-relaxed mb-6">Descrição...</p>
+            <button onclick="closeModal()" class="w-full py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium text-xs transition-colors">
+                Fechar
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal Player de Vídeo/Áudio do Google Drive -->
+    <div id="video-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md hidden">
+        <div class="glass-panel w-full max-w-3xl rounded-3xl p-4 sm:p-6 border border-slate-700 relative shadow-2xl">
+            <button onclick="closeVideoModal()" class="absolute -top-3 -right-3 sm:top-4 sm:right-4 w-9 h-9 rounded-full bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center z-10 border border-slate-700 shadow-lg">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <h3 id="video-modal-title" class="text-lg font-bold text-white mb-3 pr-8">Título</h3>
+            <div class="relative w-full overflow-hidden rounded-2xl bg-black aspect-video border border-slate-800">
+                <iframe id="media-iframe" class="w-full h-full" src="" title="Media player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p id="video-modal-desc" class="text-xs text-slate-400 mt-3"></p>
+        </div>
+    </div>
+
+    <!-- Modal Adicionar Mídia do Google Drive -->
+    <div id="add-media-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-sm hidden">
+        <div class="glass-panel w-full max-w-md rounded-3xl p-6 border border-slate-700 relative shadow-2xl">
+            <button onclick="toggleAddMediaModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="text-lg font-bold text-white mb-1">Adicionar Mídia do Google Drive</h3>
+            <p class="text-xs text-slate-400 mb-4">Cole o link público de compartilhamento do arquivo de vídeo ou áudio do seu Google Drive.</p>
+
+            <form id="media-form" onsubmit="saveNewMedia(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Título do Conteúdo</label>
+                    <input type="text" id="media-title" required placeholder="Ex: Vídeo de Demonstração do Robô Arduino" class="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white focus:outline-none focus:border-brand-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Link do Google Drive (URL de compartilhamento)</label>
+                    <input type="url" id="media-url" required placeholder="https://drive.google.com/file/d/.../view?usp=sharing" class="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white focus:outline-none focus:border-brand-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Turma / Categoria</label>
+                    <select id="media-tag" class="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white focus:outline-none focus:border-brand-500">
+                        <option value="1º Ano">1º Ano (Fundamentação Teórica / Banner)</option>
+                        <option value="2º Ano">2º Ano (Pesquisa Teórica / Banner)</option>
+                        <option value="3º Ano">3º Ano (Robótica / Arduino / Site)</option>
+                        <option value="Geral">Geral / Orientação</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Pequena Descrição</label>
+                    <textarea id="media-desc" rows="2" placeholder="Descrição do vídeo ou áudio para os alunos..." class="w-full px-3 py-2 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white focus:outline-none focus:border-brand-500"></textarea>
+                </div>
+
+                <div class="pt-2 flex space-x-3">
+                    <button type="button" onclick="toggleAddMediaModal()" class="w-1/2 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-xs transition-colors">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="w-1/2 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium text-xs transition-colors">
+                        Salvar Mídia
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function openModal(turma, titulo, texto) {
+            document.getElementById('modal-turma').innerText = turma;
+            document.getElementById('modal-titulo').innerText = titulo;
+            document.getElementById('modal-texto').innerText = texto;
+            document.getElementById('info-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('info-modal').classList.add('hidden');
+        }
+
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('info-modal');
+            if (e.target === modal) closeModal();
+        });
+
+        let mediaItems = [
+            {
+                id: '1',
+                title: 'Áudio de Orientação e Embasamento Teórico — 1º Ano',
+                type: 'drive',
+                url: 'https://drive.google.com/file/d/1Eux484WRUPbH7Kx46upvq9TRv5tFjHYi/view?usp=sharing',
+                tag: '1º Ano',
+                description: 'Instruções e embasamento em Ciências Humanas gravados para a fundamentação teórica e banner do 1º Ano.'
+            },
+            {
+                id: '2',
+                title: 'Áudio de Orientação e Pesquisa Teórica — 2º Ano',
+                type: 'drive',
+                url: 'https://drive.google.com/file/d/1yMmCwUbT28rXAdj-6lMEdFuBUnriVc_T/view?usp=drive_link',
+                tag: '2º Ano',
+                description: 'Orientação em áudio gravada para os estudantes do 2º Ano sobre a pesquisa e o alinhamento do banner.'
+            }
+        ];
+
+        let currentFilter = 'todos';
+
+        function getDriveEmbedUrl(url) {
+            if (!url) return '';
+            return url.replace(/\/view.*$/, '/preview').replace(/\/edit.*$/, '/preview');
+        }
+
+        function renderMedia() {
+            const container = document.getElementById('media-grid');
+            container.innerHTML = '';
+
+            const filtered = currentFilter === 'todos' 
+                ? mediaItems 
+                : mediaItems.filter(item => item.tag === currentFilter);
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full py-12 text-center glass-panel rounded-2xl border border-slate-800">
+                        <i class="fa-brands fa-google-drive text-3xl text-slate-600 mb-2"></i>
+                        <p class="text-sm text-slate-400">Nenhum áudio ou vídeo do Google Drive cadastrado para esta categoria ainda.</p>
+                        <p class="text-xs text-slate-500 mt-1">Quando você gravar e enviar novos vídeos para o Drive, poderá adicioná-los pelo botão acima!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "glass-panel rounded-2xl p-5 border border-slate-700/80 flex flex-col justify-between hover:border-slate-600 transition-all";
+
+                const embedDriveUrl = getDriveEmbedUrl(item.url);
+                card.innerHTML = `
+                    <div>
+                        <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 mb-4 flex items-center space-x-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-500/20 text-brand-400 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-brands fa-google-drive"></i>
+                            </div>
+                            <div class="overflow-hidden">
+                                <span class="text-[10px] font-bold text-brand-400 uppercase block">${item.tag} • Google Drive</span>
+                                <h5 class="text-xs font-bold text-white truncate">${item.title}</h5>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 mb-4 leading-relaxed">${item.description}</p>
+                    </div>
+                    <div class="space-y-2">
+                        <button onclick="playDriveMedia('${embedDriveUrl}', '${escapeQuotes(item.title)}', '${escapeQuotes(item.description)}')" class="w-full py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium text-xs transition-colors flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-play"></i>
+                            <span>Reproduzir Player no Site</span>
+                        </button>
+                        <a href="${item.url}" target="_blank" class="w-full py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium text-[11px] transition-colors flex items-center justify-center space-x-1.5">
+                            <i class="fa-solid fa-external-link text-xs"></i>
+                            <span>Abrir no Google Drive</span>
+                        </a>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        function escapeQuotes(str) {
+            return str ? str.replace(/'/g, "\\'").replace(/"/g, '&quot;') : '';
+        }
+
+        function filterMediaByTag(tag) {
+            currentFilter = tag;
+            document.querySelectorAll('.media-filter-btn').forEach(btn => {
+                btn.classList.remove('bg-slate-800', 'text-slate-200');
+                btn.classList.add('bg-slate-800/80', 'text-slate-400');
+            });
+            renderMedia();
+            
+            const mediaSec = document.getElementById('multimidia');
+            if (mediaSec && window.scrollY < mediaSec.offsetTop - 200) {
+                mediaSec.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function playDriveMedia(embedUrl, title, desc) {
+            const iframe = document.getElementById('media-iframe');
+            iframe.src = embedUrl;
+            document.getElementById('video-modal-title').innerText = title;
+            document.getElementById('video-modal-desc').innerText = desc;
+            document.getElementById('video-modal').classList.remove('hidden');
+        }
+
+        function closeVideoModal() {
+            const iframe = document.getElementById('media-iframe');
+            iframe.src = '';
+            document.getElementById('video-modal').classList.add('hidden');
+        }
+
+        function toggleAddMediaModal() {
+            document.getElementById('add-media-modal').classList.toggle('hidden');
+        }
+
+        function saveNewMedia(event) {
+            event.preventDefault();
+            const title = document.getElementById('media-title').value;
+            const url = document.getElementById('media-url').value;
+            const tag = document.getElementById('media-tag').value;
+            const desc = document.getElementById('media-desc').value;
+
+            const newItem = {
+                id: Date.now().toString(),
+                title: title,
+                type: 'drive',
+                url: url,
+                tag: tag,
+                description: desc || 'Arquivo enviado para o Google Drive para suporte à exposição.'
+            };
+
+            mediaItems.unshift(newItem);
+            renderMedia();
+            toggleAddMediaModal();
+            document.getElementById('media-form').reset();
+        }
+
+        window.onload = function() {
+            renderMedia();
+        };
+    </script>
+</body>
+</html>
